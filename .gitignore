@@ -1,0 +1,61 @@
+# ---------- Terraform ----------
+# Provider binaries and module cache (hundreds of MB, recreated by `terraform init`)
+**/.terraform/*
+
+# Local state and backups (real state lives in the S3 backend)
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Saved plans can contain secrets in plain text
+*.tfplan
+tfplan
+*.plan
+
+# Override files are local-only by convention
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Environment specific variable values (copy from terraform.tfvars.example)
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# CLI config
+.terraformrc
+terraform.rc
+
+
+# NOTE: .terraform.lock.hcl is intentionally NOT ignored.
+# Commit it so everyone uses the same provider versions.
+
+# ---------- Secrets and credentials ----------
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials
+.aws/
+kubeconfig
+*.kubeconfig
+
+# ---------- Editors and OS ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Claude Code local settings ----------
+.claude/
